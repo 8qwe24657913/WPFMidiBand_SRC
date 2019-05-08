@@ -2,7 +2,7 @@
 
 C# 课程实验3
 
-![](https://raw.githubusercontent.com/8qwe24657913/WPFMidiBand_SRC/master/Images/WPF.gif)
+![](https://raw.githubusercontent.com/8qwe24657913/WPFMidiBand_SRC/master/Images/WPF.png)
 
 ## 功能概述
 
@@ -38,4 +38,3 @@ C# 课程实验3
 
 1. WPF 实现透明远比 Winform 的奇技淫巧简单，效果也更好
 2. 采用可作为文本编辑的 XAML 构建界面比 WinForm 只能通过设计器修改的灵活性更强，也更加直观
-
