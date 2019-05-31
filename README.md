@@ -17,23 +17,21 @@ C# 课程实验3
 7. 可直接拖拽文件到窗口内来播放
 8. 添加了任务栏显示播放进度和控制播放功能，进一步提升了美观性和实用性
 
-\1. 
-
 **实现细节**
 
-\1. 关于循环播放
+1. 关于循环播放
 
 与 WindowsForm 不同，WPF 使用 Dispatcher.Invoke() 和 Dispatcher.BeginInvoke() 在其它线程运行代码，但基本原理大同小异，MIDI 播放器为了保证操作的原子性，在内部使用了锁，而对 MIDI 播放器的调用只能在主线程，需要 Invoke() 方法，Invoke() 方法会打断目标线程正在执行的代码，直到操作完成，如果 Invoke() 时恰好 MIDI 的锁被占用，Action 获取不到锁，就会等待锁的释放，而锁的释放又要等待 Invoke() 完成，于是造成了程序的假死现象
 
 ![img](https://raw.githubusercontent.com/8qwe24657913/WPFMidiBand_SRC/master/Images/lock.png) 
 
-\2. 关于时间显示
+2. 关于时间显示
 
 与 WindowsForm 中计算方法完全相同，不再赘述
 
 ![img](https://raw.githubusercontent.com/8qwe24657913/WPFMidiBand_SRC/master/Images/tempo.png) 
 
-\3. 关于透明的实现
+3. 关于透明的实现
 
 WPF 实现透明功能远比 WindowsForm 简单得多，只需要将
 
@@ -65,7 +63,7 @@ WPF 实现透明功能远比 WindowsForm 简单得多，只需要将
 
 此外还要注意，使用透明时不能使用 Windows 自带的窗口标题栏，标题栏需要自己绘制
 
-\4. 关于任务栏上的进度和播放控制
+4. 关于任务栏上的进度和播放控制
 
 WPF 对此功能提供了很好的支持，只需要在 XAML 中添加代码
 
